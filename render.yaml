@@ -1,9 +1,7 @@
 services:
   - type: web
     name: apex-academy-sms
-    env: php
-    buildCommand: ./render-build.sh
-    startCommand: heroku-php-nginx public/
+    runtime: docker
     envVars:
       - key: APP_ENV
         value: production
